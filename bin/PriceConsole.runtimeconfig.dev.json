@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\shifeng.ASCENTIS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\shifeng.ASCENTIS\\.nuget\\packages"
+    ]
+  }
+}
