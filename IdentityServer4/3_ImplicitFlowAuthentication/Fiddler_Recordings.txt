@@ -1,0 +1,1010 @@
+GET http://localhost:7000/home/secure HTTP/1.1
+Host: localhost:7000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8
+
+
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:36:50 GMT
+Server: Kestrel
+Content-Length: 0
+Location: http://localhost:5000/connect/authorize?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0
+Set-Cookie: .AspNetCore.OpenIdConnect.Nonce.CfDJ8BfzAJsH8yxIrVytiLVBNrGqJW99K6xxk2aEXy1VdYmO-0Sg8oHBcvYe8CV4btSYxMmOK_cBMCftg7t-AZOecEEHCiHDS08fAA0mdnfYfq4iJUy5cGrBrnST1DgXd-sW7Asl7TiiOwPOMFAAOD2vcF3bqTaQsL9cgHWyForqd3kfGd-Mh8_xq9weHCaxvVr9TKqbtZNEfAyw-EpZYKlm5aoA5tgv1Wiyq9vBIOLa471v39fiLg8_9koPI9WqGTiqz9gK8b9Q0hPbGtgCfgHdeBQ=N; expires=Wed, 03 Jun 2020 07:51:50 GMT; path=/signin-oidc; samesite=none; httponly
+Set-Cookie: .AspNetCore.Correlation.oidc.lUTmajYW0it7TNMWDxgBczplOxOu3skEi4RyJ3-tMGA=N; expires=Wed, 03 Jun 2020 07:51:50 GMT; path=/signin-oidc; samesite=none; httponly
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/connect/authorize?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8
+
+
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:36:50 GMT
+Server: Kestrel
+Content-Length: 0
+Location: http://localhost:5000/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:36:50 GMT
+Content-Type: text/html; charset=utf-8
+Server: Kestrel
+Cache-Control: no-cache, no-store
+Pragma: no-cache
+Transfer-Encoding: chunked
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';
+X-Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';
+Referrer-Policy: no-referrer
+
+1312
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdentityServer4</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <span class="navbar-brand">
+                        <img src="/icon.png" class="icon-banner">
+                        IdentityServer4
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        
+<div class="login-page">
+    <div class="page-header">
+        <h1>Login</h1>
+    </div>
+
+    
+
+    <div class="row">
+
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Local Login</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <form action="" method="post">
+                            <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=mvc&amp;redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&amp;response_type=id_token&amp;scope=openid%20profile&amp;response_mode=form_post&amp;nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&amp;state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&amp;x-client-SKU=ID_NETSTANDARD1_4&amp;x-client-ver=5.2.0.0" />
+
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="Username">Username</label>
+                                    <input class="form-control" placeholder="Username" autofocus type="text" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password">Password</label>
+                                    <input type="password" class="form-control" placeholder="Password" autocomplete="off" data-val="true" data-val-required="The Password field is required." id="Password" name="Password">
+                                </div>
+                                    <div class="form-group login-remember">
+                                        <label for="RememberLogin">
+                                            <input type="checkbox" data-val="true" data-val-required="The RememberLogin field is required." id="RememberLogin" name="RememberLogin" value="true">
+                                            <strong>Remember My Login</strong>
+                                        </label>
+                                    </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" name="button" value="login">Login</button>
+                                    <button class="btn btn-default" name="button" value="cancel">Cancel</button>
+                                </div>
+                            </fieldset>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BfzAJsH8yxIrVytiLVBNrFW8HVjDSCpYlB2vHy6wEOxmqVbCxtKR4gnCRN21MFno_BzxGaNpjmzRfT-HAZa6xyYY7r8ekrpRlImYpXQ5VwTkvimtX1M1_qRcQbC3HfLSV4AC20Qr06g1qr_AJuycyY" /><input name="RememberLogin" type="hidden" value="false"></form>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+</div>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    
+</body>
+</html>
+
+0
+
+
+
+------------------------------------------------------------------
+
+POST http://localhost:5000/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 1009
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: null
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8
+
+ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0&Username=alice&Password=password&button=login&__RequestVerificationToken=CfDJ8BfzAJsH8yxIrVytiLVBNrFPPGdjZ7sdQjT1b_vs3ROpJfKcJsOTLSiAFbjuGiPGZGiUU-E9gOKP2g-lDw-rBTkqUHBT-LedQC5ayvp1UIhvOEIrdTNKApavzHe5W2CdOR3G815GSNc-M395h26gN2w&RememberLogin=false
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:37:21 GMT
+Server: Kestrel
+Content-Length: 0
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /connect/authorize/callback?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0
+Set-Cookie: idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; path=/; samesite=none
+Set-Cookie: idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrHB1XwyqCuji4VNGZ11IiwjC6Oef-_kJ3Z4pSI30ErJU680xnCRwoIpCPCGWyTE_mt7gVdXHXe3e9uDmdFkoBs7SevXREa4ceK_yX2I3Yl1bHXN_UN_PInoIk7U1xb5EQWuM_JCtBkI5XWkfsreDMtyy8RG3wl-lF6piNak2iV9lA-McIKSvMMpJ_Htv2wYB3qRaE3QXqPegL0KAqa4d9TzRCtZD78pKOBdCCpgEEVA5O4l4SQFrfc-U_FIKUxFnq0c11i7ApUeCJnZyY8dTFWbGeIktigXLlCQAWmpkBe-alBf3E3GibmGJtmvp3r4tVJCHXyU81gjhlRSaTk2p7awb3iMXM4jLA_yeDzaSccJYKeZI9dcRyQMMCym1dUfJcKvGYtpqQHHJ7mjfPWKYvuneHW828SGRCBWnSN4oT-iDOw-h8Yaw3IZg0yAlJoLaDPRrzu-ENdjowuw6prAasem; path=/; samesite=none; httponly
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/connect/authorize/callback?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrHB1XwyqCuji4VNGZ11IiwjC6Oef-_kJ3Z4pSI30ErJU680xnCRwoIpCPCGWyTE_mt7gVdXHXe3e9uDmdFkoBs7SevXREa4ceK_yX2I3Yl1bHXN_UN_PInoIk7U1xb5EQWuM_JCtBkI5XWkfsreDMtyy8RG3wl-lF6piNak2iV9lA-McIKSvMMpJ_Htv2wYB3qRaE3QXqPegL0KAqa4d9TzRCtZD78pKOBdCCpgEEVA5O4l4SQFrfc-U_FIKUxFnq0c11i7ApUeCJnZyY8dTFWbGeIktigXLlCQAWmpkBe-alBf3E3GibmGJtmvp3r4tVJCHXyU81gjhlRSaTk2p7awb3iMXM4jLA_yeDzaSccJYKeZI9dcRyQMMCym1dUfJcKvGYtpqQHHJ7mjfPWKYvuneHW828SGRCBWnSN4oT-iDOw-h8Yaw3IZg0yAlJoLaDPRrzu-ENdjowuw6prAasem
+
+
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:37:21 GMT
+Server: Kestrel
+Content-Length: 0
+Location: http://localhost:5000/consent?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/consent?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrHB1XwyqCuji4VNGZ11IiwjC6Oef-_kJ3Z4pSI30ErJU680xnCRwoIpCPCGWyTE_mt7gVdXHXe3e9uDmdFkoBs7SevXREa4ceK_yX2I3Yl1bHXN_UN_PInoIk7U1xb5EQWuM_JCtBkI5XWkfsreDMtyy8RG3wl-lF6piNak2iV9lA-McIKSvMMpJ_Htv2wYB3qRaE3QXqPegL0KAqa4d9TzRCtZD78pKOBdCCpgEEVA5O4l4SQFrfc-U_FIKUxFnq0c11i7ApUeCJnZyY8dTFWbGeIktigXLlCQAWmpkBe-alBf3E3GibmGJtmvp3r4tVJCHXyU81gjhlRSaTk2p7awb3iMXM4jLA_yeDzaSccJYKeZI9dcRyQMMCym1dUfJcKvGYtpqQHHJ7mjfPWKYvuneHW828SGRCBWnSN4oT-iDOw-h8Yaw3IZg0yAlJoLaDPRrzu-ENdjowuw6prAasem
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:21 GMT
+Content-Type: text/html; charset=utf-8
+Server: Kestrel
+Cache-Control: no-cache, no-store
+Pragma: no-cache
+Transfer-Encoding: chunked
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';
+X-Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';
+Referrer-Policy: no-referrer
+
+16c3
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdentityServer4</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <span class="navbar-brand">
+                        <img src="/icon.png" class="icon-banner">
+                        IdentityServer4
+                    </span>
+                </a>
+            </div>
+
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">alice <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Account/Logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        
+<div class="page-consent">
+    <div class="row page-header">
+        <div class="col-sm-10">
+            <h1>
+                MVC Client
+                <small>is requesting your permission</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8">
+            
+            
+            <form class="consent-form" action="/consent" method="post">
+                <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="/connect/authorize/callback?client_id=mvc&amp;redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&amp;response_type=id_token&amp;scope=openid%20profile&amp;response_mode=form_post&amp;nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&amp;state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&amp;x-client-SKU=ID_NETSTANDARD1_4&amp;x-client-ver=5.2.0.0" />
+
+                <div>Uncheck the permissions you do not wish to grant.</div>
+                
+                    <div class="panel panel-default consent-buttons">
+                        <div class="panel-heading">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Personal Information
+                        </div>
+                        <ul class="list-group">
+                                
+<li class="list-group-item">
+    <label>
+        <input class="consent-scopecheck"
+               type="checkbox"
+               name="ScopesConsented"
+               id="scopes_openid"
+               value="openid"
+               checked="checked"
+               disabled="disabled" />
+            <input type="hidden"
+                   name="ScopesConsented"
+                   value="openid" />
+        <strong>Your user identifier</strong>
+    </label>
+        <span><em>(required)</em></span>
+    </li>
+                                
+<li class="list-group-item">
+    <label>
+        <input class="consent-scopecheck"
+               type="checkbox"
+               name="ScopesConsented"
+               id="scopes_profile"
+               value="profile"
+               checked="checked" />
+        <strong>User profile</strong>
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+    </label>
+            <div class="consent-description">
+            <label for="scopes_profile">Your user profile information (first name, last name, etc.)</label>
+        </div>
+</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="consent-remember">
+                        <label>
+                            <input class="consent-scopecheck" type="checkbox" checked="checked" data-val="true" data-val-required="The RememberConsent field is required." id="RememberConsent" name="RememberConsent" value="true" />
+                            <strong>Remember My Decision</strong>
+                        </label>
+                    </div>
+
+                <div class="consent-buttons">
+                    <button name="button" value="yes" class="btn btn-primary" autofocus>Yes, Allow</button>
+                    <button name="button" value="no" class="btn">No, Do Not Allow</button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BfzAJsH8yxIrVytiLVBNrFvEaSM-YHwbKUML4oaCy6bg74Z3hH1wxEHp_wk-L_9y_ngDO9zbZi80ThTmNLnOPODcWt8Um7lHo8KM9h5WoUvfI5F4ouavaI65tLE8F37n4upLo9tS94tLISCtY-EUgwm_yXiUYIW8GVHV3MyWepYcAv-DdkJVOaD3DlNYgzG_w" /><input name="RememberConsent" type="hidden" value="false" /></form>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    
+</body>
+</html>
+
+0
+
+
+
+------------------------------------------------------------------
+
+POST http://localhost:5000/consent HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Content-Length: 1087
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: null
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrHB1XwyqCuji4VNGZ11IiwjC6Oef-_kJ3Z4pSI30ErJU680xnCRwoIpCPCGWyTE_mt7gVdXHXe3e9uDmdFkoBs7SevXREa4ceK_yX2I3Yl1bHXN_UN_PInoIk7U1xb5EQWuM_JCtBkI5XWkfsreDMtyy8RG3wl-lF6piNak2iV9lA-McIKSvMMpJ_Htv2wYB3qRaE3QXqPegL0KAqa4d9TzRCtZD78pKOBdCCpgEEVA5O4l4SQFrfc-U_FIKUxFnq0c11i7ApUeCJnZyY8dTFWbGeIktigXLlCQAWmpkBe-alBf3E3GibmGJtmvp3r4tVJCHXyU81gjhlRSaTk2p7awb3iMXM4jLA_yeDzaSccJYKeZI9dcRyQMMCym1dUfJcKvGYtpqQHHJ7mjfPWKYvuneHW828SGRCBWnSN4oT-iDOw-h8Yaw3IZg0yAlJoLaDPRrzu-ENdjowuw6prAasem
+
+ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dmvc%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A7000%252Fsignin-oidc%26response_type%3Did_token%26scope%3Dopenid%2520profile%26response_mode%3Dform_post%26nonce%3D637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4%26state%3DCfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U%26x-client-SKU%3DID_NETSTANDARD1_4%26x-client-ver%3D5.2.0.0&ScopesConsented=openid&ScopesConsented=profile&RememberConsent=true&button=yes&__RequestVerificationToken=CfDJ8BfzAJsH8yxIrVytiLVBNrFvEaSM-YHwbKUML4oaCy6bg74Z3hH1wxEHp_wk-L_9y_ngDO9zbZi80ThTmNLnOPODcWt8Um7lHo8KM9h5WoUvfI5F4ouavaI65tLE8F37n4upLo9tS94tLISCtY-EUgwm_yXiUYIW8GVHV3MyWepYcAv-DdkJVOaD3DlNYgzG_w&RememberConsent=false
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:37:27 GMT
+Server: Kestrel
+Content-Length: 0
+Location: /connect/authorize/callback?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0
+Set-Cookie: ConsentResponse.VgZFVk2J_Mt6OHat5C3-J5pvLVeTAwV2e5lQWslkZWw=CfDJ8BfzAJsH8yxIrVytiLVBNrGgk-5ONyejvRSq_KYgKfdm_4zjwIQwvWDaUgXxWblzzvx9JwEeloeVM80ge6z12c9ITBxUGVa7pLocIlIxlgm1RVMDy-At359mmMtgWbHSGyeLwc04EyGE-ZymhrtzqVmthIlc39aRac76OjklDYwa6tlzwvx6FudK21JQcmE6BxdyqOqFK3yk_EWQqa-tB-IampLFHh7gM43nH6jBLYrR9Ob8ELM0_3l6dYfBveUwVHsmCoecUkP8RrDnxLueh6I; path=/; samesite=lax; httponly
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/connect/authorize/callback?client_id=mvc&redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response_mode=form_post&nonce=637267666105029845.MGY5Y2E5NzUtZWU2NS00NmZiLThkMGYtOWI2NmQ4Y2E4ZGFmMDVkMjE3MDYtNjUzYS00MDMyLWEzYjktMDdlZDY2Y2MyODU4&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrHB1XwyqCuji4VNGZ11IiwjC6Oef-_kJ3Z4pSI30ErJU680xnCRwoIpCPCGWyTE_mt7gVdXHXe3e9uDmdFkoBs7SevXREa4ceK_yX2I3Yl1bHXN_UN_PInoIk7U1xb5EQWuM_JCtBkI5XWkfsreDMtyy8RG3wl-lF6piNak2iV9lA-McIKSvMMpJ_Htv2wYB3qRaE3QXqPegL0KAqa4d9TzRCtZD78pKOBdCCpgEEVA5O4l4SQFrfc-U_FIKUxFnq0c11i7ApUeCJnZyY8dTFWbGeIktigXLlCQAWmpkBe-alBf3E3GibmGJtmvp3r4tVJCHXyU81gjhlRSaTk2p7awb3iMXM4jLA_yeDzaSccJYKeZI9dcRyQMMCym1dUfJcKvGYtpqQHHJ7mjfPWKYvuneHW828SGRCBWnSN4oT-iDOw-h8Yaw3IZg0yAlJoLaDPRrzu-ENdjowuw6prAasem; ConsentResponse.VgZFVk2J_Mt6OHat5C3-J5pvLVeTAwV2e5lQWslkZWw=CfDJ8BfzAJsH8yxIrVytiLVBNrGgk-5ONyejvRSq_KYgKfdm_4zjwIQwvWDaUgXxWblzzvx9JwEeloeVM80ge6z12c9ITBxUGVa7pLocIlIxlgm1RVMDy-At359mmMtgWbHSGyeLwc04EyGE-ZymhrtzqVmthIlc39aRac76OjklDYwa6tlzwvx6FudK21JQcmE6BxdyqOqFK3yk_EWQqa-tB-IampLFHh7gM43nH6jBLYrR9Ob8ELM0_3l6dYfBveUwVHsmCoecUkP8RrDnxLueh6I
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:28 GMT
+Content-Type: text/html; charset=UTF-8
+Server: Kestrel
+Cache-Control: no-store, no-cache, max-age=0
+Pragma: no-cache
+Transfer-Encoding: chunked
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Set-Cookie: ConsentResponse.VgZFVk2J_Mt6OHat5C3-J5pvLVeTAwV2e5lQWslkZWw=.; expires=Fri, 31 Dec 1999 16:00:00 GMT; path=/; samesite=lax; httponly
+Set-Cookie: idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw; path=/; samesite=none; httponly
+Content-Security-Policy: default-src 'none'; script-src 'sha256-VuNUSJ59bpCpw62HM2JG/hCyGiqoPN3NqGvNXQPU+rY='
+X-Content-Security-Policy: default-src 'none'; script-src 'sha256-VuNUSJ59bpCpw62HM2JG/hCyGiqoPN3NqGvNXQPU+rY='
+Referrer-Policy: no-referrer
+
+70c
+<html><head><base target='_self'/></head><body><form method='post' action='http://localhost:7000/signin-oidc'><input type='hidden' name='id_token' value='eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2MDg1MzAzZDg1ZDRkMWJiMGVhOGQ5ZjBhMTcxMGU5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExNjk4NDgsImV4cCI6MTU5MTE3MDE0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzcyNjc2NjYxMDUwMjk4NDUuTUdZNVkyRTVOelV0WldVMk5TMDBObVppTFRoa01HWXRPV0kyTm1RNFkyRTRaR0ZtTURWa01qRTNNRFl0TmpVellTMDBNRE15TFdFellqa3RNRGRsWkRZMlkyTXlPRFU0IiwiaWF0IjoxNTkxMTY5ODQ3LCJzaWQiOiI0ZWFhNTM1YjIyMGExMTU2MDgxYTRlZjhkMGFjZTZhZCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExNjk4NDEsImlkcCI6ImxvY2FsIiwibmFtZSI6IkFsaWNlIiwid2Vic2l0ZSI6Imh0dHBzOi8vYWxpY2UuY29tIiwiYW1yIjpbInB3ZCJdfQ.R94fOlHVUJL-2QJxP7I8WqWQGu7gvmPsZfzJGQtu7Bdo2_m5M8A0PplI5c2RnsyyOG2yL5SxMTmzvBHobj-DhXNPH8DT2nMVVCO6RL_3bGusYRHCDFwze4HwXZ3gE837YDVf9D9lKmmB302yDB1LOPNF1mdZxYS__0sOg1fCp7oW4tFezUBNk7MbkL0XhwAokhoo93OHSkn4lSLicBczOF_oJQ8HoLIkcmySEBNv_Q00mKMwtzM5O0HnT18P-jzAff4h8SwZ7FN3VxfC7aZegNGIOP30kuVq3fOJrWi_-a651hwAgxy5-4nm7Dvt7TwKSsiAehlyd8NIanSYSQmGJw' />
+<input type='hidden' name='scope' value='openid profile' />
+<input type='hidden' name='state' value='CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U' />
+<input type='hidden' name='session_state' value='DLH_PXCHhl1aDIX3lFEJLCESOGcUiFY_s9njkMLWkU8.256283aca3cad3bacedcae3cdd92d6c7' />
+<noscript><button>Click to continue</button></noscript></form><script>(function(){document.forms[0].submit();})();</script></body></html>
+0
+
+
+
+------------------------------------------------------------------
+
+POST http://localhost:7000/signin-oidc HTTP/1.1
+Host: localhost:7000
+Connection: keep-alive
+Content-Length: 1400
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: null
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Correlation.oidc.vyda_JoYBSoTbnHMHQYfBDAY0Yku6nIx6B-fb_izGGk=N; .AspNetCore.OpenIdConnect.Nonce.CfDJ8BfzAJsH8yxIrVytiLVBNrEjkmr8WbnsfzBmGKr5f8DeeenXetyIP_5jGJnhaJ2Y0G1EAX0rrNQB0Mf5ZSkBQK5q1B-G4maCZGgoIhkW28Vz3lIM6ouhpcVbEA_9psWC3mz-QJeCVyu7pyYIFZxxu9Z11KcFdW2zMzV26uP6Ru5Pv1IRTTs7h2jOf9vVYOmPeBcIjTUsn7Bf1njIlcAumB9k6x7OmVmh3N8C4S4a86D_3qzPjJbknqVs5KIM17HOMuIA9uEpu6x_xAPoVAYIKVQ=N; .AspNetCore.OpenIdConnect.Nonce.CfDJ8BfzAJsH8yxIrVytiLVBNrF17SPbDnvzwaRaiWGPaVyXMT4HppbGGTHsscc-XIwi1uix6zPgwfFn8fSgqYDmGf11MEC8AOcCweD2GY3rQJElUBZHCJcHerbsFJ0HIqa7fBHyzOzpGrlzZBbzv2AyycOwR6WIDOBe16BbOSnUOT7KruDqFhV8tjqnzHEtaVjl5fzs1JNqinm7a5DS9qbtBUjgSxpeLLb2ZXpNylmAv3qd7K_W3zIFUrfzMHXWBYR-kFFqF7nM4u_0ZCvGOsI9peE=N; .AspNetCore.Correlation.oidc.oMGCH-w4D1OfcxRq3qi_PAhCToUia_aa7g_1AVGTcmI=N; .AspNetCore.OpenIdConnect.Nonce.CfDJ8BfzAJsH8yxIrVytiLVBNrGqJW99K6xxk2aEXy1VdYmO-0Sg8oHBcvYe8CV4btSYxMmOK_cBMCftg7t-AZOecEEHCiHDS08fAA0mdnfYfq4iJUy5cGrBrnST1DgXd-sW7Asl7TiiOwPOMFAAOD2vcF3bqTaQsL9cgHWyForqd3kfGd-Mh8_xq9weHCaxvVr9TKqbtZNEfAyw-EpZYKlm5aoA5tgv1Wiyq9vBIOLa471v39fiLg8_9koPI9WqGTiqz9gK8b9Q0hPbGtgCfgHdeBQ=N; .AspNetCore.Correlation.oidc.lUTmajYW0it7TNMWDxgBczplOxOu3skEi4RyJ3-tMGA=N; .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw
+
+id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2MDg1MzAzZDg1ZDRkMWJiMGVhOGQ5ZjBhMTcxMGU5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExNjk4NDgsImV4cCI6MTU5MTE3MDE0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzcyNjc2NjYxMDUwMjk4NDUuTUdZNVkyRTVOelV0WldVMk5TMDBObVppTFRoa01HWXRPV0kyTm1RNFkyRTRaR0ZtTURWa01qRTNNRFl0TmpVellTMDBNRE15TFdFellqa3RNRGRsWkRZMlkyTXlPRFU0IiwiaWF0IjoxNTkxMTY5ODQ3LCJzaWQiOiI0ZWFhNTM1YjIyMGExMTU2MDgxYTRlZjhkMGFjZTZhZCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExNjk4NDEsImlkcCI6ImxvY2FsIiwibmFtZSI6IkFsaWNlIiwid2Vic2l0ZSI6Imh0dHBzOi8vYWxpY2UuY29tIiwiYW1yIjpbInB3ZCJdfQ.R94fOlHVUJL-2QJxP7I8WqWQGu7gvmPsZfzJGQtu7Bdo2_m5M8A0PplI5c2RnsyyOG2yL5SxMTmzvBHobj-DhXNPH8DT2nMVVCO6RL_3bGusYRHCDFwze4HwXZ3gE837YDVf9D9lKmmB302yDB1LOPNF1mdZxYS__0sOg1fCp7oW4tFezUBNk7MbkL0XhwAokhoo93OHSkn4lSLicBczOF_oJQ8HoLIkcmySEBNv_Q00mKMwtzM5O0HnT18P-jzAff4h8SwZ7FN3VxfC7aZegNGIOP30kuVq3fOJrWi_-a651hwAgxy5-4nm7Dvt7TwKSsiAehlyd8NIanSYSQmGJw&scope=openid+profile&state=CfDJ8BfzAJsH8yxIrVytiLVBNrEiiSwsFvlKOaGhKATtu5kUqDFhcCyG9AdCNgd9EFjBCUX3MReXrdJJJAB1bMkF-06OLEyY7IqE7peAjkn42ci-yYPAnz50ElKjDvajv1g_LBPyanQQq0t6PgO0AWFAgcGXnR4pZU0oyQVRA_bCRhdxLyYigoYysyLiTVJu-FD6K4EVdNyyR3jkUaZ5Hgv7C0rgBIeQRdia11c2DsWJ5val-PH9I0jn65cswEf08lCOdQJGlVP301aywoqtlj8wegARdEE3UWw4hXaVBwaL1x33gy6meWW5Jh7_kixeG76xoY1aMt6iEAVRagQ74589H8U&session_state=DLH_PXCHhl1aDIX3lFEJLCESOGcUiFY_s9njkMLWkU8.256283aca3cad3bacedcae3cdd92d6c7
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:37:28 GMT
+Server: Kestrel
+Content-Length: 0
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: http://localhost:7000/home/secure
+Set-Cookie: .AspNetCore.Correlation.oidc.lUTmajYW0it7TNMWDxgBczplOxOu3skEi4RyJ3-tMGA=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/signin-oidc; samesite=none; httponly
+Set-Cookie: .AspNetCore.OpenIdConnect.Nonce.CfDJ8BfzAJsH8yxIrVytiLVBNrGqJW99K6xxk2aEXy1VdYmO-0Sg8oHBcvYe8CV4btSYxMmOK_cBMCftg7t-AZOecEEHCiHDS08fAA0mdnfYfq4iJUy5cGrBrnST1DgXd-sW7Asl7TiiOwPOMFAAOD2vcF3bqTaQsL9cgHWyForqd3kfGd-Mh8_xq9weHCaxvVr9TKqbtZNEfAyw-EpZYKlm5aoA5tgv1Wiyq9vBIOLa471v39fiLg8_9koPI9WqGTiqz9gK8b9Q0hPbGtgCfgHdeBQ=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/signin-oidc; samesite=none; httponly
+Set-Cookie: .AspNetCore.Cookies=CfDJ8BfzAJsH8yxIrVytiLVBNrF8op_UIHldmTWNjCyeWMyOEh4ghrT-3nhqfuYMHvCpgIj6DXHsv26O-wbqSRX9vgwenDFYw1PSRWYXTN_bwMVRImsuju2uuA3cGR8-dou2Ytw3KiZBj3-hiXR0peTuHwGCCOt1azi3DabVYiA0VWSo2DCzC6KFdRN-kmnHP2-nJeRAlQYhnJ7ADm0wxri14ih_dnjKLf7QCrrI_Jv1qIwrdgH32epq_gRgcMmQ-vbdYu0U0vQngxfansRfWpB1MjGuPP52-OdOckMuHysuucFsTqfz2YZwVaVd5ikE5m8MotusTD4zAs4MWubWh_S7zt1Ard5I4glO5ilAOJMaiCyBc5sfrFgl6NIVsB_TlN_rPI8JCfQVA4yF1FzINypoRUQNjkPqWLr3JaFjPuP-QSf44qExeFJihfuh8ehxI4WI5gbShhMLFyAPo5haR79hkvBCkqwcke9_a9wBULabr06hSbtKz7qcQfPu6THgXDnzrnT3VUidfUp-DUyZFpZbBtVjIFX2iW50WrmC0EFXaC-ZcLuh0bJZjMOysw2jEY8agtXBf38d3z4l8jQMYPRl-Q8w6o-1kgVBpqaIIb8yN3A1KkihBRwvv1aRZ1fcD5aZCyXgjebPLKQDOIuGcIqEFUQuqjjKm7Y4S9wUcYnV0B6XsILgfaONprAWasGA_ia1jz15FjWOq_ILkT4W-uVb4ZMNtCQuzKPpIx3rcY_z9OciW1FH-w_mKb8js7xfgSrOv7QgM0wMiObYxOr0Tj-P2KHdwxArMqUdHAZyn3rIGWaAbDLEunWfk_I7-QkpPZI-bSrcPT86CKPlAuPdjdh-cIV1rFx5a2O-K78WeFMDC_1z5e52pwpvTCM_VipSeIvULNtOzS9_4H0qoclvK5LwpCmWnjXNXLO4Elo6DYwvN4JI2L30n0hJDOBlb81T58kzf6tnXqRBOVS0gVGGCd4SIrIXTiUHYn8hi0M_9228fEijuTHWEttPFZtXfFiTxx9MWg3XGlpbrBWvwx6Z2Y3Kta0OS-d4ruULSEw45MGy5r2VNGS2WaUFHFR89OY8EDb0PmhzsUL_FzXFryGB30p851UoM9CqvcZH28u43t2Vep4HsWquvrxgEEDzeX280_PrQj0zb4KmCWgoGfl71sXOxQwVaufsVJhPdGVIn6EhSw85vAtclas9HeoufKBiqFxsX3MWQYAYDfAvdYIoZIJAYGmbaH2w1yWrvXfV_Bj8eW_sxSn46BmWdYnx0o3QVbw6VqDhigQyH5BGJT3PmtV5SkShqQk_SSA1azETMihpco4XzoFlbF34NWqKstFOaTT3FJY9eRjeM0-1sY6caVJvmVW88DEaomBWAGvA17X8yD8xR7i716rPDbNsK0_X9hy-LtYsHL_xyYyCdLulMB8zTJvP25Es0v656TLeBgHnJOeGUx0JG3JMWoilaq6Y3lErFIZ7FMqqfoF7C8bHfGavyJlt8esvYMwPCcT_WhMHuIKy32OTJDvsUV4on6GAbB3pmMHHDn4COLFpBSZL6Okk2aFFbks7y2QDhKHUCJfJX_QAx1AID5pYXDICfydzIQ_Dlef6sxY4_nVzQYeelw7cqRZofuEWgehhrJv3xcU6GGwWKzJV9tf1ooaqfxki7-vhALEDq_vd4B047GsRYkKg9oRRFuEoIWbyvsC8lRv63NEwIdwAE70Yznaen8h9ZRXC7qAAc7ar_9qkdK8_wD4EvOczaPK2gmf0J68dcYuHjQRboptY7RDupexbuxPYyWaGR_dli8qdM9lHy1VHPpcQ3u3bt5xyEto-w-0vqb-H9GpeSuBzckq9imYdXgymoV1u-Me7tfvU2OHO1cGTp6NDb_JwSpAo2C9k0W-kSp6njfHqIFRFxJsCnTbNXuiT1X92bQG1brxOW_fnzkjDodeb0hkrig59Wxm8oMZ6AEaV2nQ2vM3v_zzQD0QhzPnFgK76URuOPbXgOWJHrliCHSTv-d8XwsPzaLUm15mIIv61hwCz5Xz_sJVw0xJINQI0Blp82MUbYL4-OZ3f-VqWJJwGG05T2CKJoCDnHPDpzKtH_74Hcx_fyqw5b6c2EgEogyir5HAooZxQi_FPHKU0jU1lkLOxG5qr_ApbX5mD6hDP2PjC-HnSzj7t8AXEo8OOvgZA2QG97U0hPszV1VfyMInL2Dwhw32mltrqnVfVLz1V0med; path=/; samesite=lax; httponly
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:7000/home/secure HTTP/1.1
+Host: localhost:7000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw; .AspNetCore.Cookies=CfDJ8BfzAJsH8yxIrVytiLVBNrF8op_UIHldmTWNjCyeWMyOEh4ghrT-3nhqfuYMHvCpgIj6DXHsv26O-wbqSRX9vgwenDFYw1PSRWYXTN_bwMVRImsuju2uuA3cGR8-dou2Ytw3KiZBj3-hiXR0peTuHwGCCOt1azi3DabVYiA0VWSo2DCzC6KFdRN-kmnHP2-nJeRAlQYhnJ7ADm0wxri14ih_dnjKLf7QCrrI_Jv1qIwrdgH32epq_gRgcMmQ-vbdYu0U0vQngxfansRfWpB1MjGuPP52-OdOckMuHysuucFsTqfz2YZwVaVd5ikE5m8MotusTD4zAs4MWubWh_S7zt1Ard5I4glO5ilAOJMaiCyBc5sfrFgl6NIVsB_TlN_rPI8JCfQVA4yF1FzINypoRUQNjkPqWLr3JaFjPuP-QSf44qExeFJihfuh8ehxI4WI5gbShhMLFyAPo5haR79hkvBCkqwcke9_a9wBULabr06hSbtKz7qcQfPu6THgXDnzrnT3VUidfUp-DUyZFpZbBtVjIFX2iW50WrmC0EFXaC-ZcLuh0bJZjMOysw2jEY8agtXBf38d3z4l8jQMYPRl-Q8w6o-1kgVBpqaIIb8yN3A1KkihBRwvv1aRZ1fcD5aZCyXgjebPLKQDOIuGcIqEFUQuqjjKm7Y4S9wUcYnV0B6XsILgfaONprAWasGA_ia1jz15FjWOq_ILkT4W-uVb4ZMNtCQuzKPpIx3rcY_z9OciW1FH-w_mKb8js7xfgSrOv7QgM0wMiObYxOr0Tj-P2KHdwxArMqUdHAZyn3rIGWaAbDLEunWfk_I7-QkpPZI-bSrcPT86CKPlAuPdjdh-cIV1rFx5a2O-K78WeFMDC_1z5e52pwpvTCM_VipSeIvULNtOzS9_4H0qoclvK5LwpCmWnjXNXLO4Elo6DYwvN4JI2L30n0hJDOBlb81T58kzf6tnXqRBOVS0gVGGCd4SIrIXTiUHYn8hi0M_9228fEijuTHWEttPFZtXfFiTxx9MWg3XGlpbrBWvwx6Z2Y3Kta0OS-d4ruULSEw45MGy5r2VNGS2WaUFHFR89OY8EDb0PmhzsUL_FzXFryGB30p851UoM9CqvcZH28u43t2Vep4HsWquvrxgEEDzeX280_PrQj0zb4KmCWgoGfl71sXOxQwVaufsVJhPdGVIn6EhSw85vAtclas9HeoufKBiqFxsX3MWQYAYDfAvdYIoZIJAYGmbaH2w1yWrvXfV_Bj8eW_sxSn46BmWdYnx0o3QVbw6VqDhigQyH5BGJT3PmtV5SkShqQk_SSA1azETMihpco4XzoFlbF34NWqKstFOaTT3FJY9eRjeM0-1sY6caVJvmVW88DEaomBWAGvA17X8yD8xR7i716rPDbNsK0_X9hy-LtYsHL_xyYyCdLulMB8zTJvP25Es0v656TLeBgHnJOeGUx0JG3JMWoilaq6Y3lErFIZ7FMqqfoF7C8bHfGavyJlt8esvYMwPCcT_WhMHuIKy32OTJDvsUV4on6GAbB3pmMHHDn4COLFpBSZL6Okk2aFFbks7y2QDhKHUCJfJX_QAx1AID5pYXDICfydzIQ_Dlef6sxY4_nVzQYeelw7cqRZofuEWgehhrJv3xcU6GGwWKzJV9tf1ooaqfxki7-vhALEDq_vd4B047GsRYkKg9oRRFuEoIWbyvsC8lRv63NEwIdwAE70Yznaen8h9ZRXC7qAAc7ar_9qkdK8_wD4EvOczaPK2gmf0J68dcYuHjQRboptY7RDupexbuxPYyWaGR_dli8qdM9lHy1VHPpcQ3u3bt5xyEto-w-0vqb-H9GpeSuBzckq9imYdXgymoV1u-Me7tfvU2OHO1cGTp6NDb_JwSpAo2C9k0W-kSp6njfHqIFRFxJsCnTbNXuiT1X92bQG1brxOW_fnzkjDodeb0hkrig59Wxm8oMZ6AEaV2nQ2vM3v_zzQD0QhzPnFgK76URuOPbXgOWJHrliCHSTv-d8XwsPzaLUm15mIIv61hwCz5Xz_sJVw0xJINQI0Blp82MUbYL4-OZ3f-VqWJJwGG05T2CKJoCDnHPDpzKtH_74Hcx_fyqw5b6c2EgEogyir5HAooZxQi_FPHKU0jU1lkLOxG5qr_ApbX5mD6hDP2PjC-HnSzj7t8AXEo8OOvgZA2QG97U0hPszV1VfyMInL2Dwhw32mltrqnVfVLz1V0med
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:28 GMT
+Content-Type: text/html; charset=utf-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+dc5
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - MvcClient</title>
+
+    
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/site.css" />
+    
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MvcClient</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/Secure">Secure</a></li>
+                        <li><a href="/Home/Logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+<h2>Claims</h2>
+
+<dl>
+        <dt>sid</dt>
+        <dd>4eaa535b220a1156081a4ef8d0ace6ad</dd>
+        <dt>sub</dt>
+        <dd>1</dd>
+        <dt>idp</dt>
+        <dd>local</dd>
+        <dt>name</dt>
+        <dd>Alice</dd>
+        <dt>website</dt>
+        <dd>https://alice.com</dd>
+</dl>
+
+<h2>Properties</h2>
+
+<dl>
+        <dt>.AuthScheme</dt>
+        <dd>oidc</dd>
+        <dt>.sessionState</dt>
+        <dd>DLH_PXCHhl1aDIX3lFEJLCESOGcUiFY_s9njkMLWkU8.256283aca3cad3bacedcae3cdd92d6c7</dd>
+        <dt>OpenIdConnect.Code.RedirectUri</dt>
+        <dd>http://localhost:7000/signin-oidc</dd>
+        <dt>.checkSessionIFrame</dt>
+        <dd>http://localhost:5000/connect/checksession</dd>
+        <dt>.Token.id_token</dt>
+        <dd>eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2MDg1MzAzZDg1ZDRkMWJiMGVhOGQ5ZjBhMTcxMGU5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExNjk4NDgsImV4cCI6MTU5MTE3MDE0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzcyNjc2NjYxMDUwMjk4NDUuTUdZNVkyRTVOelV0WldVMk5TMDBObVppTFRoa01HWXRPV0kyTm1RNFkyRTRaR0ZtTURWa01qRTNNRFl0TmpVellTMDBNRE15TFdFellqa3RNRGRsWkRZMlkyTXlPRFU0IiwiaWF0IjoxNTkxMTY5ODQ3LCJzaWQiOiI0ZWFhNTM1YjIyMGExMTU2MDgxYTRlZjhkMGFjZTZhZCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExNjk4NDEsImlkcCI6ImxvY2FsIiwibmFtZSI6IkFsaWNlIiwid2Vic2l0ZSI6Imh0dHBzOi8vYWxpY2UuY29tIiwiYW1yIjpbInB3ZCJdfQ.R94fOlHVUJL-2QJxP7I8WqWQGu7gvmPsZfzJGQtu7Bdo2_m5M8A0PplI5c2RnsyyOG2yL5SxMTmzvBHobj-DhXNPH8DT2nMVVCO6RL_3bGusYRHCDFwze4HwXZ3gE837YDVf9D9lKmmB302yDB1LOPNF1mdZxYS__0sOg1fCp7oW4tFezUBNk7MbkL0XhwAokhoo93OHSkn4lSLicBczOF_oJQ8HoLIkcmySEBNv_Q00mKMwtzM5O0HnT18P-jzAff4h8SwZ7FN3VxfC7aZegNGIOP30kuVq3fOJrWi_-a651hwAgxy5-4nm7Dvt7TwKSsiAehlyd8NIanSYSQmGJw</dd>
+        <dt>.TokenNames</dt>
+        <dd>id_token</dd>
+        <dt>.issued</dt>
+        <dd>Wed, 03 Jun 2020 07:37:28 GMT</dd>
+        <dt>.expires</dt>
+        <dd>Wed, 17 Jun 2020 07:37:28 GMT</dd>
+</dl>
+        <hr />
+        <footer>
+            <p>&copy; 2016 - MvcClient</p>
+        </footer>
+    </div>
+
+    
+        <script src="/lib/jquery/dist/jquery.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"></script>
+    
+    
+
+    
+</body>
+</html>
+
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:7000/ HTTP/1.1
+Host: localhost:7000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:7000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw; .AspNetCore.Cookies=CfDJ8BfzAJsH8yxIrVytiLVBNrF8op_UIHldmTWNjCyeWMyOEh4ghrT-3nhqfuYMHvCpgIj6DXHsv26O-wbqSRX9vgwenDFYw1PSRWYXTN_bwMVRImsuju2uuA3cGR8-dou2Ytw3KiZBj3-hiXR0peTuHwGCCOt1azi3DabVYiA0VWSo2DCzC6KFdRN-kmnHP2-nJeRAlQYhnJ7ADm0wxri14ih_dnjKLf7QCrrI_Jv1qIwrdgH32epq_gRgcMmQ-vbdYu0U0vQngxfansRfWpB1MjGuPP52-OdOckMuHysuucFsTqfz2YZwVaVd5ikE5m8MotusTD4zAs4MWubWh_S7zt1Ard5I4glO5ilAOJMaiCyBc5sfrFgl6NIVsB_TlN_rPI8JCfQVA4yF1FzINypoRUQNjkPqWLr3JaFjPuP-QSf44qExeFJihfuh8ehxI4WI5gbShhMLFyAPo5haR79hkvBCkqwcke9_a9wBULabr06hSbtKz7qcQfPu6THgXDnzrnT3VUidfUp-DUyZFpZbBtVjIFX2iW50WrmC0EFXaC-ZcLuh0bJZjMOysw2jEY8agtXBf38d3z4l8jQMYPRl-Q8w6o-1kgVBpqaIIb8yN3A1KkihBRwvv1aRZ1fcD5aZCyXgjebPLKQDOIuGcIqEFUQuqjjKm7Y4S9wUcYnV0B6XsILgfaONprAWasGA_ia1jz15FjWOq_ILkT4W-uVb4ZMNtCQuzKPpIx3rcY_z9OciW1FH-w_mKb8js7xfgSrOv7QgM0wMiObYxOr0Tj-P2KHdwxArMqUdHAZyn3rIGWaAbDLEunWfk_I7-QkpPZI-bSrcPT86CKPlAuPdjdh-cIV1rFx5a2O-K78WeFMDC_1z5e52pwpvTCM_VipSeIvULNtOzS9_4H0qoclvK5LwpCmWnjXNXLO4Elo6DYwvN4JI2L30n0hJDOBlb81T58kzf6tnXqRBOVS0gVGGCd4SIrIXTiUHYn8hi0M_9228fEijuTHWEttPFZtXfFiTxx9MWg3XGlpbrBWvwx6Z2Y3Kta0OS-d4ruULSEw45MGy5r2VNGS2WaUFHFR89OY8EDb0PmhzsUL_FzXFryGB30p851UoM9CqvcZH28u43t2Vep4HsWquvrxgEEDzeX280_PrQj0zb4KmCWgoGfl71sXOxQwVaufsVJhPdGVIn6EhSw85vAtclas9HeoufKBiqFxsX3MWQYAYDfAvdYIoZIJAYGmbaH2w1yWrvXfV_Bj8eW_sxSn46BmWdYnx0o3QVbw6VqDhigQyH5BGJT3PmtV5SkShqQk_SSA1azETMihpco4XzoFlbF34NWqKstFOaTT3FJY9eRjeM0-1sY6caVJvmVW88DEaomBWAGvA17X8yD8xR7i716rPDbNsK0_X9hy-LtYsHL_xyYyCdLulMB8zTJvP25Es0v656TLeBgHnJOeGUx0JG3JMWoilaq6Y3lErFIZ7FMqqfoF7C8bHfGavyJlt8esvYMwPCcT_WhMHuIKy32OTJDvsUV4on6GAbB3pmMHHDn4COLFpBSZL6Okk2aFFbks7y2QDhKHUCJfJX_QAx1AID5pYXDICfydzIQ_Dlef6sxY4_nVzQYeelw7cqRZofuEWgehhrJv3xcU6GGwWKzJV9tf1ooaqfxki7-vhALEDq_vd4B047GsRYkKg9oRRFuEoIWbyvsC8lRv63NEwIdwAE70Yznaen8h9ZRXC7qAAc7ar_9qkdK8_wD4EvOczaPK2gmf0J68dcYuHjQRboptY7RDupexbuxPYyWaGR_dli8qdM9lHy1VHPpcQ3u3bt5xyEto-w-0vqb-H9GpeSuBzckq9imYdXgymoV1u-Me7tfvU2OHO1cGTp6NDb_JwSpAo2C9k0W-kSp6njfHqIFRFxJsCnTbNXuiT1X92bQG1brxOW_fnzkjDodeb0hkrig59Wxm8oMZ6AEaV2nQ2vM3v_zzQD0QhzPnFgK76URuOPbXgOWJHrliCHSTv-d8XwsPzaLUm15mIIv61hwCz5Xz_sJVw0xJINQI0Blp82MUbYL4-OZ3f-VqWJJwGG05T2CKJoCDnHPDpzKtH_74Hcx_fyqw5b6c2EgEogyir5HAooZxQi_FPHKU0jU1lkLOxG5qr_ApbX5mD6hDP2PjC-HnSzj7t8AXEo8OOvgZA2QG97U0hPszV1VfyMInL2Dwhw32mltrqnVfVLz1V0med
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:40 GMT
+Content-Type: text/html; charset=utf-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+6a4
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - MvcClient</title>
+
+    
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/site.css" />
+    
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MvcClient</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/Secure">Secure</a></li>
+                        <li><a href="/Home/Logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+<h2>OpenID Connect MVC Client</h2>
+        <hr />
+        <footer>
+            <p>&copy; 2016 - MvcClient</p>
+        </footer>
+    </div>
+
+    
+        <script src="/lib/jquery/dist/jquery.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"></script>
+    
+    
+
+    
+</body>
+</html>
+
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:7000/Home/Secure HTTP/1.1
+Host: localhost:7000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:7000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw; .AspNetCore.Cookies=CfDJ8BfzAJsH8yxIrVytiLVBNrF8op_UIHldmTWNjCyeWMyOEh4ghrT-3nhqfuYMHvCpgIj6DXHsv26O-wbqSRX9vgwenDFYw1PSRWYXTN_bwMVRImsuju2uuA3cGR8-dou2Ytw3KiZBj3-hiXR0peTuHwGCCOt1azi3DabVYiA0VWSo2DCzC6KFdRN-kmnHP2-nJeRAlQYhnJ7ADm0wxri14ih_dnjKLf7QCrrI_Jv1qIwrdgH32epq_gRgcMmQ-vbdYu0U0vQngxfansRfWpB1MjGuPP52-OdOckMuHysuucFsTqfz2YZwVaVd5ikE5m8MotusTD4zAs4MWubWh_S7zt1Ard5I4glO5ilAOJMaiCyBc5sfrFgl6NIVsB_TlN_rPI8JCfQVA4yF1FzINypoRUQNjkPqWLr3JaFjPuP-QSf44qExeFJihfuh8ehxI4WI5gbShhMLFyAPo5haR79hkvBCkqwcke9_a9wBULabr06hSbtKz7qcQfPu6THgXDnzrnT3VUidfUp-DUyZFpZbBtVjIFX2iW50WrmC0EFXaC-ZcLuh0bJZjMOysw2jEY8agtXBf38d3z4l8jQMYPRl-Q8w6o-1kgVBpqaIIb8yN3A1KkihBRwvv1aRZ1fcD5aZCyXgjebPLKQDOIuGcIqEFUQuqjjKm7Y4S9wUcYnV0B6XsILgfaONprAWasGA_ia1jz15FjWOq_ILkT4W-uVb4ZMNtCQuzKPpIx3rcY_z9OciW1FH-w_mKb8js7xfgSrOv7QgM0wMiObYxOr0Tj-P2KHdwxArMqUdHAZyn3rIGWaAbDLEunWfk_I7-QkpPZI-bSrcPT86CKPlAuPdjdh-cIV1rFx5a2O-K78WeFMDC_1z5e52pwpvTCM_VipSeIvULNtOzS9_4H0qoclvK5LwpCmWnjXNXLO4Elo6DYwvN4JI2L30n0hJDOBlb81T58kzf6tnXqRBOVS0gVGGCd4SIrIXTiUHYn8hi0M_9228fEijuTHWEttPFZtXfFiTxx9MWg3XGlpbrBWvwx6Z2Y3Kta0OS-d4ruULSEw45MGy5r2VNGS2WaUFHFR89OY8EDb0PmhzsUL_FzXFryGB30p851UoM9CqvcZH28u43t2Vep4HsWquvrxgEEDzeX280_PrQj0zb4KmCWgoGfl71sXOxQwVaufsVJhPdGVIn6EhSw85vAtclas9HeoufKBiqFxsX3MWQYAYDfAvdYIoZIJAYGmbaH2w1yWrvXfV_Bj8eW_sxSn46BmWdYnx0o3QVbw6VqDhigQyH5BGJT3PmtV5SkShqQk_SSA1azETMihpco4XzoFlbF34NWqKstFOaTT3FJY9eRjeM0-1sY6caVJvmVW88DEaomBWAGvA17X8yD8xR7i716rPDbNsK0_X9hy-LtYsHL_xyYyCdLulMB8zTJvP25Es0v656TLeBgHnJOeGUx0JG3JMWoilaq6Y3lErFIZ7FMqqfoF7C8bHfGavyJlt8esvYMwPCcT_WhMHuIKy32OTJDvsUV4on6GAbB3pmMHHDn4COLFpBSZL6Okk2aFFbks7y2QDhKHUCJfJX_QAx1AID5pYXDICfydzIQ_Dlef6sxY4_nVzQYeelw7cqRZofuEWgehhrJv3xcU6GGwWKzJV9tf1ooaqfxki7-vhALEDq_vd4B047GsRYkKg9oRRFuEoIWbyvsC8lRv63NEwIdwAE70Yznaen8h9ZRXC7qAAc7ar_9qkdK8_wD4EvOczaPK2gmf0J68dcYuHjQRboptY7RDupexbuxPYyWaGR_dli8qdM9lHy1VHPpcQ3u3bt5xyEto-w-0vqb-H9GpeSuBzckq9imYdXgymoV1u-Me7tfvU2OHO1cGTp6NDb_JwSpAo2C9k0W-kSp6njfHqIFRFxJsCnTbNXuiT1X92bQG1brxOW_fnzkjDodeb0hkrig59Wxm8oMZ6AEaV2nQ2vM3v_zzQD0QhzPnFgK76URuOPbXgOWJHrliCHSTv-d8XwsPzaLUm15mIIv61hwCz5Xz_sJVw0xJINQI0Blp82MUbYL4-OZ3f-VqWJJwGG05T2CKJoCDnHPDpzKtH_74Hcx_fyqw5b6c2EgEogyir5HAooZxQi_FPHKU0jU1lkLOxG5qr_ApbX5mD6hDP2PjC-HnSzj7t8AXEo8OOvgZA2QG97U0hPszV1VfyMInL2Dwhw32mltrqnVfVLz1V0med
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:45 GMT
+Content-Type: text/html; charset=utf-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+dc5
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - MvcClient</title>
+
+    
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/site.css" />
+    
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MvcClient</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/Secure">Secure</a></li>
+                        <li><a href="/Home/Logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+<h2>Claims</h2>
+
+<dl>
+        <dt>sid</dt>
+        <dd>4eaa535b220a1156081a4ef8d0ace6ad</dd>
+        <dt>sub</dt>
+        <dd>1</dd>
+        <dt>idp</dt>
+        <dd>local</dd>
+        <dt>name</dt>
+        <dd>Alice</dd>
+        <dt>website</dt>
+        <dd>https://alice.com</dd>
+</dl>
+
+<h2>Properties</h2>
+
+<dl>
+        <dt>.AuthScheme</dt>
+        <dd>oidc</dd>
+        <dt>.sessionState</dt>
+        <dd>DLH_PXCHhl1aDIX3lFEJLCESOGcUiFY_s9njkMLWkU8.256283aca3cad3bacedcae3cdd92d6c7</dd>
+        <dt>OpenIdConnect.Code.RedirectUri</dt>
+        <dd>http://localhost:7000/signin-oidc</dd>
+        <dt>.checkSessionIFrame</dt>
+        <dd>http://localhost:5000/connect/checksession</dd>
+        <dt>.Token.id_token</dt>
+        <dd>eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2MDg1MzAzZDg1ZDRkMWJiMGVhOGQ5ZjBhMTcxMGU5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExNjk4NDgsImV4cCI6MTU5MTE3MDE0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzcyNjc2NjYxMDUwMjk4NDUuTUdZNVkyRTVOelV0WldVMk5TMDBObVppTFRoa01HWXRPV0kyTm1RNFkyRTRaR0ZtTURWa01qRTNNRFl0TmpVellTMDBNRE15TFdFellqa3RNRGRsWkRZMlkyTXlPRFU0IiwiaWF0IjoxNTkxMTY5ODQ3LCJzaWQiOiI0ZWFhNTM1YjIyMGExMTU2MDgxYTRlZjhkMGFjZTZhZCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExNjk4NDEsImlkcCI6ImxvY2FsIiwibmFtZSI6IkFsaWNlIiwid2Vic2l0ZSI6Imh0dHBzOi8vYWxpY2UuY29tIiwiYW1yIjpbInB3ZCJdfQ.R94fOlHVUJL-2QJxP7I8WqWQGu7gvmPsZfzJGQtu7Bdo2_m5M8A0PplI5c2RnsyyOG2yL5SxMTmzvBHobj-DhXNPH8DT2nMVVCO6RL_3bGusYRHCDFwze4HwXZ3gE837YDVf9D9lKmmB302yDB1LOPNF1mdZxYS__0sOg1fCp7oW4tFezUBNk7MbkL0XhwAokhoo93OHSkn4lSLicBczOF_oJQ8HoLIkcmySEBNv_Q00mKMwtzM5O0HnT18P-jzAff4h8SwZ7FN3VxfC7aZegNGIOP30kuVq3fOJrWi_-a651hwAgxy5-4nm7Dvt7TwKSsiAehlyd8NIanSYSQmGJw</dd>
+        <dt>.TokenNames</dt>
+        <dd>id_token</dd>
+        <dt>.issued</dt>
+        <dd>Wed, 03 Jun 2020 07:37:28 GMT</dd>
+        <dt>.expires</dt>
+        <dd>Wed, 17 Jun 2020 07:37:28 GMT</dd>
+</dl>
+        <hr />
+        <footer>
+            <p>&copy; 2016 - MvcClient</p>
+        </footer>
+    </div>
+
+    
+        <script src="/lib/jquery/dist/jquery.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/js/site.js?v=Ynfdc1vuMNOWZfqTj4N3SPcebazoGXiIPgtfE-b2TO4"></script>
+    
+    
+
+    
+</body>
+</html>
+
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:7000/Home/Logout HTTP/1.1
+Host: localhost:7000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:7000/Home/Secure
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw; .AspNetCore.Cookies=CfDJ8BfzAJsH8yxIrVytiLVBNrF8op_UIHldmTWNjCyeWMyOEh4ghrT-3nhqfuYMHvCpgIj6DXHsv26O-wbqSRX9vgwenDFYw1PSRWYXTN_bwMVRImsuju2uuA3cGR8-dou2Ytw3KiZBj3-hiXR0peTuHwGCCOt1azi3DabVYiA0VWSo2DCzC6KFdRN-kmnHP2-nJeRAlQYhnJ7ADm0wxri14ih_dnjKLf7QCrrI_Jv1qIwrdgH32epq_gRgcMmQ-vbdYu0U0vQngxfansRfWpB1MjGuPP52-OdOckMuHysuucFsTqfz2YZwVaVd5ikE5m8MotusTD4zAs4MWubWh_S7zt1Ard5I4glO5ilAOJMaiCyBc5sfrFgl6NIVsB_TlN_rPI8JCfQVA4yF1FzINypoRUQNjkPqWLr3JaFjPuP-QSf44qExeFJihfuh8ehxI4WI5gbShhMLFyAPo5haR79hkvBCkqwcke9_a9wBULabr06hSbtKz7qcQfPu6THgXDnzrnT3VUidfUp-DUyZFpZbBtVjIFX2iW50WrmC0EFXaC-ZcLuh0bJZjMOysw2jEY8agtXBf38d3z4l8jQMYPRl-Q8w6o-1kgVBpqaIIb8yN3A1KkihBRwvv1aRZ1fcD5aZCyXgjebPLKQDOIuGcIqEFUQuqjjKm7Y4S9wUcYnV0B6XsILgfaONprAWasGA_ia1jz15FjWOq_ILkT4W-uVb4ZMNtCQuzKPpIx3rcY_z9OciW1FH-w_mKb8js7xfgSrOv7QgM0wMiObYxOr0Tj-P2KHdwxArMqUdHAZyn3rIGWaAbDLEunWfk_I7-QkpPZI-bSrcPT86CKPlAuPdjdh-cIV1rFx5a2O-K78WeFMDC_1z5e52pwpvTCM_VipSeIvULNtOzS9_4H0qoclvK5LwpCmWnjXNXLO4Elo6DYwvN4JI2L30n0hJDOBlb81T58kzf6tnXqRBOVS0gVGGCd4SIrIXTiUHYn8hi0M_9228fEijuTHWEttPFZtXfFiTxx9MWg3XGlpbrBWvwx6Z2Y3Kta0OS-d4ruULSEw45MGy5r2VNGS2WaUFHFR89OY8EDb0PmhzsUL_FzXFryGB30p851UoM9CqvcZH28u43t2Vep4HsWquvrxgEEDzeX280_PrQj0zb4KmCWgoGfl71sXOxQwVaufsVJhPdGVIn6EhSw85vAtclas9HeoufKBiqFxsX3MWQYAYDfAvdYIoZIJAYGmbaH2w1yWrvXfV_Bj8eW_sxSn46BmWdYnx0o3QVbw6VqDhigQyH5BGJT3PmtV5SkShqQk_SSA1azETMihpco4XzoFlbF34NWqKstFOaTT3FJY9eRjeM0-1sY6caVJvmVW88DEaomBWAGvA17X8yD8xR7i716rPDbNsK0_X9hy-LtYsHL_xyYyCdLulMB8zTJvP25Es0v656TLeBgHnJOeGUx0JG3JMWoilaq6Y3lErFIZ7FMqqfoF7C8bHfGavyJlt8esvYMwPCcT_WhMHuIKy32OTJDvsUV4on6GAbB3pmMHHDn4COLFpBSZL6Okk2aFFbks7y2QDhKHUCJfJX_QAx1AID5pYXDICfydzIQ_Dlef6sxY4_nVzQYeelw7cqRZofuEWgehhrJv3xcU6GGwWKzJV9tf1ooaqfxki7-vhALEDq_vd4B047GsRYkKg9oRRFuEoIWbyvsC8lRv63NEwIdwAE70Yznaen8h9ZRXC7qAAc7ar_9qkdK8_wD4EvOczaPK2gmf0J68dcYuHjQRboptY7RDupexbuxPYyWaGR_dli8qdM9lHy1VHPpcQ3u3bt5xyEto-w-0vqb-H9GpeSuBzckq9imYdXgymoV1u-Me7tfvU2OHO1cGTp6NDb_JwSpAo2C9k0W-kSp6njfHqIFRFxJsCnTbNXuiT1X92bQG1brxOW_fnzkjDodeb0hkrig59Wxm8oMZ6AEaV2nQ2vM3v_zzQD0QhzPnFgK76URuOPbXgOWJHrliCHSTv-d8XwsPzaLUm15mIIv61hwCz5Xz_sJVw0xJINQI0Blp82MUbYL4-OZ3f-VqWJJwGG05T2CKJoCDnHPDpzKtH_74Hcx_fyqw5b6c2EgEogyir5HAooZxQi_FPHKU0jU1lkLOxG5qr_ApbX5mD6hDP2PjC-HnSzj7t8AXEo8OOvgZA2QG97U0hPszV1VfyMInL2Dwhw32mltrqnVfVLz1V0med
+
+
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:37:49 GMT
+Server: Kestrel
+Content-Length: 0
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: http://localhost:5000/connect/endsession?post_logout_redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignout-callback-oidc&id_token_hint=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2MDg1MzAzZDg1ZDRkMWJiMGVhOGQ5ZjBhMTcxMGU5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExNjk4NDgsImV4cCI6MTU5MTE3MDE0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzcyNjc2NjYxMDUwMjk4NDUuTUdZNVkyRTVOelV0WldVMk5TMDBObVppTFRoa01HWXRPV0kyTm1RNFkyRTRaR0ZtTURWa01qRTNNRFl0TmpVellTMDBNRE15TFdFellqa3RNRGRsWkRZMlkyTXlPRFU0IiwiaWF0IjoxNTkxMTY5ODQ3LCJzaWQiOiI0ZWFhNTM1YjIyMGExMTU2MDgxYTRlZjhkMGFjZTZhZCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExNjk4NDEsImlkcCI6ImxvY2FsIiwibmFtZSI6IkFsaWNlIiwid2Vic2l0ZSI6Imh0dHBzOi8vYWxpY2UuY29tIiwiYW1yIjpbInB3ZCJdfQ.R94fOlHVUJL-2QJxP7I8WqWQGu7gvmPsZfzJGQtu7Bdo2_m5M8A0PplI5c2RnsyyOG2yL5SxMTmzvBHobj-DhXNPH8DT2nMVVCO6RL_3bGusYRHCDFwze4HwXZ3gE837YDVf9D9lKmmB302yDB1LOPNF1mdZxYS__0sOg1fCp7oW4tFezUBNk7MbkL0XhwAokhoo93OHSkn4lSLicBczOF_oJQ8HoLIkcmySEBNv_Q00mKMwtzM5O0HnT18P-jzAff4h8SwZ7FN3VxfC7aZegNGIOP30kuVq3fOJrWi_-a651hwAgxy5-4nm7Dvt7TwKSsiAehlyd8NIanSYSQmGJw&state=CfDJ8BfzAJsH8yxIrVytiLVBNrH9uRnEgxb1PQWiuvX6MObKQSTSTTPzCFgiiVMl5yKRHXnOBHANBQ4datugeOSqc66sjo4ZJ598t0RsSOCpjHH5L-gZ2zHp90vVFNufs4FdcSs8Kvcgedbw_AON7IHBWiphWA7T5a8z_QafUdRdTaPC&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0
+Set-Cookie: .AspNetCore.Cookies=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; samesite=lax; httponly
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/connect/endsession?post_logout_redirect_uri=http%3A%2F%2Flocalhost%3A7000%2Fsignout-callback-oidc&id_token_hint=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2MDg1MzAzZDg1ZDRkMWJiMGVhOGQ5ZjBhMTcxMGU5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExNjk4NDgsImV4cCI6MTU5MTE3MDE0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzcyNjc2NjYxMDUwMjk4NDUuTUdZNVkyRTVOelV0WldVMk5TMDBObVppTFRoa01HWXRPV0kyTm1RNFkyRTRaR0ZtTURWa01qRTNNRFl0TmpVellTMDBNRE15TFdFellqa3RNRGRsWkRZMlkyTXlPRFU0IiwiaWF0IjoxNTkxMTY5ODQ3LCJzaWQiOiI0ZWFhNTM1YjIyMGExMTU2MDgxYTRlZjhkMGFjZTZhZCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExNjk4NDEsImlkcCI6ImxvY2FsIiwibmFtZSI6IkFsaWNlIiwid2Vic2l0ZSI6Imh0dHBzOi8vYWxpY2UuY29tIiwiYW1yIjpbInB3ZCJdfQ.R94fOlHVUJL-2QJxP7I8WqWQGu7gvmPsZfzJGQtu7Bdo2_m5M8A0PplI5c2RnsyyOG2yL5SxMTmzvBHobj-DhXNPH8DT2nMVVCO6RL_3bGusYRHCDFwze4HwXZ3gE837YDVf9D9lKmmB302yDB1LOPNF1mdZxYS__0sOg1fCp7oW4tFezUBNk7MbkL0XhwAokhoo93OHSkn4lSLicBczOF_oJQ8HoLIkcmySEBNv_Q00mKMwtzM5O0HnT18P-jzAff4h8SwZ7FN3VxfC7aZegNGIOP30kuVq3fOJrWi_-a651hwAgxy5-4nm7Dvt7TwKSsiAehlyd8NIanSYSQmGJw&state=CfDJ8BfzAJsH8yxIrVytiLVBNrH9uRnEgxb1PQWiuvX6MObKQSTSTTPzCFgiiVMl5yKRHXnOBHANBQ4datugeOSqc66sjo4ZJ598t0RsSOCpjHH5L-gZ2zHp90vVFNufs4FdcSs8Kvcgedbw_AON7IHBWiphWA7T5a8z_QafUdRdTaPC&x-client-SKU=ID_NETSTANDARD1_4&x-client-ver=5.2.0.0 HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:7000/Home/Secure
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw
+
+
+HTTP/1.1 302 Found
+Date: Wed, 03 Jun 2020 07:37:49 GMT
+Server: Kestrel
+Content-Length: 0
+Location: http://localhost:5000/Account/Logout?logoutId=CfDJ8BfzAJsH8yxIrVytiLVBNrHLp7YBvkoDwlFQyDlXjZiKHvQC5ev2ek1aKoZucETo6djs8bg3Fx00ZZI7ECpwq4I6_BUG2YvgiXXGqfwjGgFFWRnyvOwuBBC1iNQpvSszryyXzN-3wubQnNFN65j41hQEjkQMrGhlOmq1ymCyNl8shdxVzw_bhQHkohFYjDuMGuGOm2Mknfu_D5KqXJ72MRh7uUs4VBI92pqufAy0MD1V1N5VSAiU6vnHBn9822ix3Miw1n6YmzEGjF1bFBaRaXFuF0HF9eAWlTQwyj5PwDZ0uhVU2wHtsOajVw_Sb59g6jOuhzrq1OKoKNy4XvGFkfmmHb1u9jawCJenEjBva-JJd0ca3ckuH7K154MicwRaUBQvv8anx8GkDCwecMcnLNPuSHvqyHaxK3lhkiJDIZ9pci67rYUiRJFBelTi5y0g7rT8uzntF4v-EVYGe49WmFbGzyWG8K6FsYQZR788cdcv9kJNM8rQ8EdMxBctqBJXzxv6hwulJfo0nASscknSFXcrR_evEsrdYPqvejhjX_Y1JR4dPqaTcRhpr2aMOPJJS3vbx09Ru0jrPua61X2t4Hk7LMzFzvpY0A57Odp44hpc1ht7TCmxAGeFGG8Is5hPz_lDihCjSVg3ORd5XN479H9sc2YlhkOaxguVno48RbfyPa-0DmzL8-_G9f_g_VsNGkkwAmtc7HzOmNP9BTBtqXgKIa3RmrncDNeO2FiRCkBCo5m3otJ3CMnOc6zZC4OC1Rkbkz0J53Gwb08Ni3e00vSYyuwbY4tM7AYQY-Sc1c0PXftq2ngyNdxTdqNwucrGHQ
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/Account/Logout?logoutId=CfDJ8BfzAJsH8yxIrVytiLVBNrHLp7YBvkoDwlFQyDlXjZiKHvQC5ev2ek1aKoZucETo6djs8bg3Fx00ZZI7ECpwq4I6_BUG2YvgiXXGqfwjGgFFWRnyvOwuBBC1iNQpvSszryyXzN-3wubQnNFN65j41hQEjkQMrGhlOmq1ymCyNl8shdxVzw_bhQHkohFYjDuMGuGOm2Mknfu_D5KqXJ72MRh7uUs4VBI92pqufAy0MD1V1N5VSAiU6vnHBn9822ix3Miw1n6YmzEGjF1bFBaRaXFuF0HF9eAWlTQwyj5PwDZ0uhVU2wHtsOajVw_Sb59g6jOuhzrq1OKoKNy4XvGFkfmmHb1u9jawCJenEjBva-JJd0ca3ckuH7K154MicwRaUBQvv8anx8GkDCwecMcnLNPuSHvqyHaxK3lhkiJDIZ9pci67rYUiRJFBelTi5y0g7rT8uzntF4v-EVYGe49WmFbGzyWG8K6FsYQZR788cdcv9kJNM8rQ8EdMxBctqBJXzxv6hwulJfo0nASscknSFXcrR_evEsrdYPqvejhjX_Y1JR4dPqaTcRhpr2aMOPJJS3vbx09Ru0jrPua61X2t4Hk7LMzFzvpY0A57Odp44hpc1ht7TCmxAGeFGG8Is5hPz_lDihCjSVg3ORd5XN479H9sc2YlhkOaxguVno48RbfyPa-0DmzL8-_G9f_g_VsNGkkwAmtc7HzOmNP9BTBtqXgKIa3RmrncDNeO2FiRCkBCo5m3otJ3CMnOc6zZC4OC1Rkbkz0J53Gwb08Ni3e00vSYyuwbY4tM7AYQY-Sc1c0PXftq2ngyNdxTdqNwucrGHQ HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:7000/Home/Secure
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8; idsrv.session=4eaa535b220a1156081a4ef8d0ace6ad; idsrv=CfDJ8BfzAJsH8yxIrVytiLVBNrGo86YSkjJy2gWGiw8i8c2KXeV0e_RiZ7SN5sih1z5Nv2TBkl8TNZRVvK4wHDu4qalSZ9CDA3JSORrpk2SKoxSLzrSnnn3tVR5Ogkxed8EOzqgnd3Hwg_jtfvWb8lyZnPfCHRLFXRP4kUymwko02ikr9PO9KW3uuYcPZ9XgDpdJaDDlO41h1l5Av_TrdT_KppiTYvFm-CvKumrruJiqPuDG4Z4d3Zvnd68m_2ObDVOvrFnx62w15qL5X0d_ebFyVJL-7jwAwnfivZoTuaiiXhKDlylFMgvrT7g9W5Z_yPSzHPeMwffJM6ik5TMn2uMkBxpX498Mj27sz32SWt4stViPjbGuSyq5SYpELhwB__RA1tVfhnPTwi0yiF7rpx4MxTWsQ_Dt2XihquOWXsfDA2kuvlZiuX_Aq6oZvQ_g9nrAvYf8WO2UqwgUFioeaI37z_wayo_oOIPxwwqfYhvx4iujP2LvgqhiR7w2zqUwJCvgyw
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:50 GMT
+Content-Type: text/html; charset=utf-8
+Server: Kestrel
+Cache-Control: no-cache
+Pragma: no-cache
+Transfer-Encoding: chunked
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Set-Cookie: idsrv.session=.; expires=Mon, 03 Jun 2019 07:37:50 GMT; path=/; samesite=none
+Set-Cookie: idsrv=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; samesite=none; httponly
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';
+X-Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; sandbox allow-forms allow-same-origin allow-scripts; base-uri 'self';
+Referrer-Policy: no-referrer
+
+9a0
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IdentityServer4</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <span class="navbar-brand">
+                        <img src="/icon.png" class="icon-banner">
+                        IdentityServer4
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        
+
+<div class="page-header logged-out">
+    <h1>
+        Logout
+        <small>You are now logged out</small>
+    </h1>
+
+        <div>
+            Click <a class="PostLogoutRedirectUri" href="http://localhost:7000/signout-callback-oidc?state=CfDJ8BfzAJsH8yxIrVytiLVBNrH9uRnEgxb1PQWiuvX6MObKQSTSTTPzCFgiiVMl5yKRHXnOBHANBQ4datugeOSqc66sjo4ZJ598t0RsSOCpjHH5L-gZ2zHp90vVFNufs4FdcSs8Kvcgedbw_AON7IHBWiphWA7T5a8z_QafUdRdTaPC">here</a> to return to the
+            <span>MVC Client</span> application.
+        </div>
+
+        <iframe width="0" height="0" class="signout" src="http://localhost:5000/connect/endsession/callback?endSessionId=CfDJ8BfzAJsH8yxIrVytiLVBNrENjl7o8VQNsU0kGGPIibP8yHS_EdWwbSVH4VDGvyohsKxgofQpjORgmocu0Fm1jeXwU2vQxskwznWiyd3AY4VM4HWT6N1hhrZMpg1m_DHIwOHiv2J9Z93KV16DolwhTzsY-7XNwDWuewUYnyX2w8Jjoxf4pJTOLaAdiVqI0UjXWPZsn0GHGf7esPgiMWdjF8FU_kFH6bmqrR0y7vUEF_Cs_VpSEcy1Jv_TfwqUE37qVUC0n9IewUUyDELlbST0CDc"></iframe>
+</div>
+
+
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    
+
+</body>
+</html>
+
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/connect/endsession/callback?endSessionId=CfDJ8BfzAJsH8yxIrVytiLVBNrENjl7o8VQNsU0kGGPIibP8yHS_EdWwbSVH4VDGvyohsKxgofQpjORgmocu0Fm1jeXwU2vQxskwznWiyd3AY4VM4HWT6N1hhrZMpg1m_DHIwOHiv2J9Z93KV16DolwhTzsY-7XNwDWuewUYnyX2w8Jjoxf4pJTOLaAdiVqI0UjXWPZsn0GHGf7esPgiMWdjF8FU_kFH6bmqrR0y7vUEF_Cs_VpSEcy1Jv_TfwqUE37qVUC0n9IewUUyDELlbST0CDc HTTP/1.1
+Host: localhost:5000
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Dest: iframe
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Cookie: .AspNetCore.Antiforgery.R4GqpyucJaI=CfDJ8BfzAJsH8yxIrVytiLVBNrGlj5Zd9EGsivadm2oZA8Yj4tmCBHtf_K8kM6gj2BI3loLAM98cDaYDFH5s-10G4_wDHbyqbCK3bdRQAdMG8kiBgUIV5qiUpLSbWBt5GXqEs1WxV_uYr1zlrOSpvFuSXF8
+
+
+HTTP/1.1 200 OK
+Date: Wed, 03 Jun 2020 07:37:50 GMT
+Content-Type: text/html; charset=UTF-8
+Server: Kestrel
+Cache-Control: no-store, no-cache, max-age=0
+Pragma: no-cache
+Transfer-Encoding: chunked
+Content-Security-Policy: default-src 'none'; style-src 'sha256-u+OupXgfekP+x/f6rMdoEAspPCYUtca912isERnoEjY='
+X-Content-Security-Policy: default-src 'none'; style-src 'sha256-u+OupXgfekP+x/f6rMdoEAspPCYUtca912isERnoEjY='
+
+5e
+<!DOCTYPE html><html><style>iframe{display:none;width:0;height:0;}</style><body></body></html>
+0
+
+
+
+------------------------------------------------------------------
+

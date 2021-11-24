@@ -1,0 +1,74 @@
+GET http://localhost:5000/.well-known/openid-configuration HTTP/1.1
+Host: localhost:5000
+
+
+HTTP/1.1 200 OK
+Date: Tue, 02 Jun 2020 15:21:08 GMT
+Content-Type: application/json; charset=UTF-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+5a4
+{"issuer":"http://localhost:5000","jwks_uri":"http://localhost:5000/.well-known/openid-configuration/jwks","authorization_endpoint":"http://localhost:5000/connect/authorize","token_endpoint":"http://localhost:5000/connect/token","userinfo_endpoint":"http://localhost:5000/connect/userinfo","end_session_endpoint":"http://localhost:5000/connect/endsession","check_session_iframe":"http://localhost:5000/connect/checksession","revocation_endpoint":"http://localhost:5000/connect/revocation","introspection_endpoint":"http://localhost:5000/connect/introspect","device_authorization_endpoint":"http://localhost:5000/connect/deviceauthorization","frontchannel_logout_supported":true,"frontchannel_logout_session_supported":true,"backchannel_logout_supported":true,"backchannel_logout_session_supported":true,"scopes_supported":["openid","api1","offline_access"],"claims_supported":["sub"],"grant_types_supported":["authorization_code","client_credentials","refresh_token","implicit","password","urn:ietf:params:oauth:grant-type:device_code"],"response_types_supported":["code","token","id_token","id_token token","code id_token","code token","code id_token token"],"response_modes_supported":["form_post","query","fragment"],"token_endpoint_auth_methods_supported":["client_secret_basic","client_secret_post"],"subject_types_supported":["public"],"id_token_signing_alg_values_supported":["RS256"],"code_challenge_methods_supported":["plain","S256"]}
+0
+
+
+
+------------------------------------------------------------------
+
+GET http://localhost:5000/.well-known/openid-configuration/jwks HTTP/1.1
+Host: localhost:5000
+
+
+HTTP/1.1 200 OK
+Date: Tue, 02 Jun 2020 15:21:08 GMT
+Content-Type: application/json; charset=UTF-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+1c3
+{"keys":[{"kty":"RSA","use":"sig","kid":"2ef32e460d32e6c50e2946397646f4bc","e":"AQAB","n":"zS6yZvIiWCjhiVPMalv0AF57LrrcqAJSiujSGXu8GS-RcqymaUeqWrOIIoYGmu5bz-wtJ0VNb7j6WavHEZDfSGyVmzHIok1Nn--sCVoSsdDz6juZvnAHEi0RDcpfw47mBqJX3yMBSZGuJ-JfRj6T7UVmnyFLoO8fVQZu4DP2ax5-q7eUk8WmsjSyvWYzIrnHzzohc-eVo9wbD2qp0PxNtwqXw_oq8BN_2pM5OzSahn5LY-nEEmD-n_exDiwlTXOdfrm5UGJdzU8AgUl-qUYZFW40f0Zx4TaDGRJSKX7SHEt57-v7HeOxwW9dMYmIspupJGi-OVe9RJlxD_Ezf80p_Q","alg":"RS256"}]}
+0
+
+
+
+------------------------------------------------------------------
+
+POST http://localhost:5000/connect/token HTTP/1.1
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 104
+Host: localhost:5000
+
+username=alice&password=password&scope=api1&grant_type=password&client_id=ro.client&client_secret=secret
+HTTP/1.1 200 OK
+Date: Tue, 02 Jun 2020 15:21:09 GMT
+Content-Type: application/json; charset=UTF-8
+Server: Kestrel
+Cache-Control: no-store, no-cache, max-age=0
+Pragma: no-cache
+Content-Length: 782
+
+{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJlZjMyZTQ2MGQzMmU2YzUwZTI5NDYzOTc2NDZmNGJjIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExMTEyNjksImV4cCI6MTU5MTExNDg2OSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJhcGkxIl0sImNsaWVudF9pZCI6InJvLmNsaWVudCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExMTEyNjksImlkcCI6ImxvY2FsIiwic2NvcGUiOlsiYXBpMSJdLCJhbXIiOlsicHdkIl19.CqezI4GsNO3paReo57exLQ2WxdrLc8CdptsZmvh75m3sQtz5qeIeBTkXjRecRg-TRvu77IY2oKja914z3JcnGBE8ilay7XONEW5-GwoNHS27DKJACSeCPLEKMfdiWsmv5LM0zg4u7mKnovL7TJ64_b50vLJUhq7N5EPalAaH5u8_r3WlM_wEBX_a9QJJ2uOnUuz6lfiP_oSBbwqc4zFNrnC-xzlYAvdBJtzVFalr6ADYxf5u4L_mxElQmGWjgPpTXqMVIlHJ8ibdAN1TNpwdLkuPnB8QKMTzcC--6v9j8ZzxM50dVOv1tJttATJN3HcsKTrSb9_CXaqovfM7jOYZXA","expires_in":3600,"token_type":"Bearer"}
+
+------------------------------------------------------------------
+
+GET http://localhost:9000/identity HTTP/1.1
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjJlZjMyZTQ2MGQzMmU2YzUwZTI5NDYzOTc2NDZmNGJjIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1OTExMTEyNjksImV4cCI6MTU5MTExNDg2OSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJhcGkxIl0sImNsaWVudF9pZCI6InJvLmNsaWVudCIsInN1YiI6IjEiLCJhdXRoX3RpbWUiOjE1OTExMTEyNjksImlkcCI6ImxvY2FsIiwic2NvcGUiOlsiYXBpMSJdLCJhbXIiOlsicHdkIl19.CqezI4GsNO3paReo57exLQ2WxdrLc8CdptsZmvh75m3sQtz5qeIeBTkXjRecRg-TRvu77IY2oKja914z3JcnGBE8ilay7XONEW5-GwoNHS27DKJACSeCPLEKMfdiWsmv5LM0zg4u7mKnovL7TJ64_b50vLJUhq7N5EPalAaH5u8_r3WlM_wEBX_a9QJJ2uOnUuz6lfiP_oSBbwqc4zFNrnC-xzlYAvdBJtzVFalr6ADYxf5u4L_mxElQmGWjgPpTXqMVIlHJ8ibdAN1TNpwdLkuPnB8QKMTzcC--6v9j8ZzxM50dVOv1tJttATJN3HcsKTrSb9_CXaqovfM7jOYZXA
+Host: localhost:9000
+
+
+HTTP/1.1 200 OK
+Date: Tue, 02 Jun 2020 15:21:09 GMT
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+24b
+[{"type":"nbf","value":"1591111269"},{"type":"exp","value":"1591114869"},{"type":"iss","value":"http://localhost:5000"},{"type":"aud","value":"http://localhost:5000/resources"},{"type":"aud","value":"api1"},{"type":"client_id","value":"ro.client"},{"type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier","value":"1"},{"type":"auth_time","value":"1591111269"},{"type":"http://schemas.microsoft.com/identity/claims/identityprovider","value":"local"},{"type":"scope","value":"api1"},{"type":"http://schemas.microsoft.com/claims/authnmethodsreferences","value":"pwd"}]
+0
+
+
+
+------------------------------------------------------------------
+
